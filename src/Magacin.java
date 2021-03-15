@@ -9,8 +9,9 @@ public class Magacin implements MagacinInterfejs {
 
 	
 	public void dodavanjeArtikla(Artikli a) {
-	for (Artikli ar: artikli)
-		if (!artikli.contains(a))
+	for (int i=0; i<artikli.size(); i++)
+		if (artikli.contains(a))
+			throw new RuntimeException("Ovaj artikal se vec nalazi u listi");
 			artikli.add(a);
 		
 	}
