@@ -16,30 +16,38 @@ public class KucnaHemija extends Artikli {
 		return naziv;
 	}
 	public void setNaziv(String naziv) {
-		this.naziv = naziv;
-	}
+		if (naziv==null || naziv.equals(""))
+			throw new RuntimeException("Naziv ne sme biti null ili prazan string");}
 	public String getOpis() {
 		return opis;
 	}
 	public void setOpis(String opis) {
+		if (opis==null || opis.equals(""))
+			throw new RuntimeException("Opis ne sme biti null ili prazan string");
 		this.opis = opis;
 	}
 	public int getSifra() {
 		return sifra;
 	}
 	public void setSifra(int sifra) {
+		if (sifra<=0)
+			throw new NullPointerException("Sifra ne me biti nula ili manja od nule"); 
 		this.sifra = sifra;
 	}
 	public int getKolicina() {
 		return kolicina;
 	}
 	public void setKolicina(int kolicina) {
+		if (kolicina<=0)
+			throw new NullPointerException("Kolicina ne sme biti nula ili manja od nule");
 		this.kolicina = kolicina;
 	}
 	public GregorianCalendar getRokTrajanja() {
 		return rokTrajanja;
 	}
 	public void setRokTrajanja(GregorianCalendar rokTrajanja) {
+		if (rokTrajanja.after(new GregorianCalendar()))
+			throw new RuntimeException("Rok trajanja ne sme biti posle danasnjeg datuma");
 		this.rokTrajanja = rokTrajanja;
 	}
 	@Override
