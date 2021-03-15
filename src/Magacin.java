@@ -26,11 +26,14 @@ public class Magacin implements MagacinInterfejs {
 
 	
 	public String nadjiArtikal( int sifra) {
-		for (int i=0; i<artikli.size(); i++) 
-			if (artikli.get(i).getSifra()==sifra) 
-			
 		
-		return artikli.get(i).getNaziv();
+	String ar=null;
+	
+		for (int i=0; i<artikli.size(); i++) 
+			if (artikli.get(i).getSifra()==sifra) {
+			 ar = artikli.get(i).getNaziv();
+			}			
+		return ar;
 	}
 	
 }
