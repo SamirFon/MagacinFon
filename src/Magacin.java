@@ -9,13 +9,14 @@ public class Magacin implements MagacinInterfejs {
 
 	@Override
 	public void dodavanjeArtikla(Artikli a) {
-		// TODO Auto-generated method stub
-
+	
+		
 	}
 
 	@Override
-	public void brisanjeArtikla(int kolicina) {
-		// TODO Auto-generated method stub
+	public void brisanjeArtikla(Artikli a, int kolicina) {
+		
+
 
 	}
 

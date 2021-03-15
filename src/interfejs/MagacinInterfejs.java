@@ -9,5 +9,5 @@ public interface MagacinInterfejs {
 	
 	public void brisanjeArtikla (int kolicina);
 	
-	public String nadjiArtikal (int sifra);
+	public String nadjiArtikal (Artikli a,int sifra);
 }
